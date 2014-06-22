@@ -1,0 +1,50 @@
+
+.landing-hero {
+	background-color: #37BEC4;
+	color: #fff;
+}
+
+.navbar {
+	background-color: #37BEC4;
+	margin:0;
+	border-color:#37BEC4;
+}
+
+.navbar-default .navbar-nav li a{
+	color:#fff;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.nymi-button {
+	background-color: #333;
+	border-radius: 8px;
+	width: 200px;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	border-bottom: 1px solid white;
+	color: black;
+	text-decoration: underline;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 45px;
+
+}
+.tag-line{
+	font-size: 20px;
+	text-transform: lowercase;
+}
+
+.description{
+	padding-top:15%;
+}
+
+@media screen and (max-width: 480px) {
+
+	h2{
+		font-size: 30px;
+	}
+}

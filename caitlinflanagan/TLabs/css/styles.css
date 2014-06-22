@@ -1,0 +1,17 @@
+.landing-page span {
+	color:blue;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	color: red;
+}
+
+.science {
+	background-image:url(https://thceruleanp.s3.amazonaws.com/static/img/arm_with_signal.jpg);
+	height: 600px;
+	background-position: right;
+}
+
+.science h4 {
+	color: white;
+}

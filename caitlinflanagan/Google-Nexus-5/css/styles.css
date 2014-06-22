@@ -1,0 +1,203 @@
+/*applies to all*/
+
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 50px;
+}
+
+h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 40px;
+}
+
+h4 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+}
+
+h5 {
+	font-family: 'Oswald', sans-serif;
+}
+
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 30px;
+}
+
+th {
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+}
+
+td {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/*navigation*/
+
+.navbar {
+	border: none;
+	box-shadow: 0px 3px 3px #454A42;
+}
+
+.nexus-logo {
+	height: 25px;
+}
+
+.btn-link {
+	background-color: #e7e7e7;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+	background-color:#fff;
+}
+
+#green-hover:hover {
+	background-color: #07A915;
+	color: #fff;
+}
+
+/*modal*/
+
+.modal-header {
+	box-shadow: 0px 3px 3px #454A42;
+}
+
+.modal-header p {
+	font-size: 20px;
+}
+
+.btn-primary {
+	background-color: #e7e7e7;
+	border-color: #ccc;
+	color: black;
+}
+
+.btn-primary:hover {
+	background-color: #07A915;
+	border-color: #ccc;
+	color: black;
+}
+
+.btn-default:hover {
+	background-color: #777;
+	border-color: #ccc;
+}
+
+/*inspiration*/
+
+.inspiration {
+	background-image:url(http://www.google.ca/nexus/images/introvideo-endframe_n5.jpg);
+	height: 650px;
+	background-size: cover;
+	background-position: center center;
+	margin-top: 50px;
+}
+
+/*introduction*/
+
+.introduction {
+	background-image:url(http://www.google.ca/nexus/images/nexus-5-new/moments/moment_android_2400.jpg);
+	height: 650px;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+/*photography*/
+
+.photography {
+	background-image:url(http://www.google.ca/nexus/images/nexus-5-new/moments/moment_photo_2400.jpg);
+	height: 650px;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+
+.photography img {
+	margin: auto;
+}
+
+/*carousel*/
+
+.photo-carousel {
+	background-image: url(http://www.google.ca/nexus/images/nexus-5-new/learn_photo_1200.png);
+	background-repeat: no-repeat;
+	background-position: center 120px;
+	height: 650px;
+}
+
+.photo-carousel h1 {
+	text-align: center;
+}
+
+.photo-carousel p {
+	text-align: center;
+}
+
+.carousel {
+	position: relative;
+	height: 560px;
+	padding: 61px 359px;
+}
+
+.carousel-copy p {
+	font-size: 20px;
+	text-align: center;
+}
+
+.carousel-copy h5 {
+	padding: 30px 0px 0px 0px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.carousel-indicators .active {
+	background-color: #000;
+}
+
+.carousel-indicators li {
+	border: 1px solid #000;
+}
+
+.carousel-inner>.item {
+	-webkit-transition: .3s ease-in-out left;
+	transition: .3s ease-in-out left;
+}
+
+/*techspecs*/
+
+.techspecs {
+	background-image:url(http://www.google.ca/nexus/images/nexus-5-new/moments/moment_techspec_2400.jpg);
+	height: 650px;
+	background-size: cover;
+	color: #fff;
+}
+
+#accordion {
+	color: #454A42;
+	margin: 0px 40px;
+}
+
+.techspecs h1 {
+	margin: 0px 40px;
+}
+
+.techspecs p {
+	margin: 0px 40px;
+}
+
+.panel-heading {
+	color: #777;
+}
+
+.panel-heading:hover {
+	background-color: #fff;
+}
