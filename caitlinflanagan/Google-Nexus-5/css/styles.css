@@ -56,7 +56,7 @@ a:hover {
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-	background-color:#fff;
+	background-color: #fff;
 }
 
 #green-hover:hover {
@@ -123,6 +123,10 @@ a:hover {
 
 .photography img {
 	margin: auto;
+}
+
+.photography h1 {
+	text-align: center;
 }
 
 /*carousel*/
