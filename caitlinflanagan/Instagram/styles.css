@@ -1,0 +1,38 @@
+body {
+	background: url(http://www.syisnude.co.uk/wp-content/uploads/2013/02/3_Heidi_klein.jpeg);
+}
+
+a {
+	text-decoration: none;
+}
+
+.photo {
+	display: block;
+	margin: 0px 0px 25px 0px;
+}
+
+.instagram {
+	max-width: 100%;
+	border-top: 30px solid white;
+	border-bottom: 30px solid white;
+	/*border: 7px solid #fff;*/
+	box-shadow: 3px 3px 3px #777;
+	/*border-radius: 200px;*/
+}
+
+.profile_picture {
+	border-radius: 100%;
+	max-width: 70px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px 0px 0px;
+	box-shadow: 3px 3px 3px #777;
+	border: 2px solid #fff;
+}
+
+.profile_name {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0px 0px 10px;
+	color: #000;
+}
