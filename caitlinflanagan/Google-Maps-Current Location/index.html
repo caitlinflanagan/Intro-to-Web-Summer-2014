@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps - Find This Location</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACsXnE2vnz9AMMphvLTPE9q4tuzDRNzIQ"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="container" id="user-location">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-10">
+				<form class="maps">
+					<input type="text" class="form-control" name="latitude" placeholder="Latitude">
+					<input type="text" class="form-control" name="longitude" placeholder="Longitude">
+					<button type="button submit" class="btn btn-info" value="submit">Show this Location</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="map-canvas"></div>
+</body>
+</html>

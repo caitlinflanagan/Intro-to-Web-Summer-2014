@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps - 7 Wonders</title>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACsXnE2vnz9AMMphvLTPE9q4tuzDRNzIQ"></script>
+	<!-- <script src="script.js"></script> -->
+
+	<script>
+			var wonders = [
+				{
+					name: 'Great Pyramid of Giza',
+					description: '<p>The <b>Great Pyramid of Giza</b> (also known as the <b>Pyramid of Khufu</b> or the <b>Pyramid of Cheops</b>) is the oldest and largest of the three <a target="_blank" href="http://en.wikipedia.org/wiki/Egyptian_pyramids" title="Egyptian pyramids">pyramids</a> in the <a target="_blank" href="http://en.wikipedia.org/wiki/Giza_Necropolis" title="Giza Necropolis">Giza Necropolis</a> bordering what is now <a target="_blank" href="http://en.wikipedia.org/wiki/El_G%C3%AEza" title="El Gîza" class="mw-redirect">El Giza</a>, <a target="_blank" href="http://en.wikipedia.org/wiki/Egypt" title="Egypt">Egypt</a>. It is the oldest of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a>, and the only one to remain largely intact.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg',
+					lat: '29.9791471',
+					lng: '31.1342029',
+				},
+				{
+					name: 'The Hanging Gardens of Babylon',
+					description: '<p>The <b>Hanging Gardens of Babylon</b> were one of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a>, and the only one whose location has not been definitely established.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/a/ae/Hanging_Gardens_of_Babylon.jpg',
+					lat: '32.543618',
+					lng: '44.42408',
+				},
+				{
+					name: 'Statue of Zeus at Olympia',
+					description: '<p>The <b>Statue of Zeus at Olympia</b> was a giant seated figure, about 13&nbsp;m (43&nbsp;ft) tall, made by the Greek sculptor <a target="_blank" href="http://en.wikipedia.org/wiki/Phidias" title="Phidias">Phidias</a> around 435 BC at the sanctuary of Olympia, Greece, and erected in the <a target="_blank" href="http://en.wikipedia.org/wiki/Temple_of_Zeus" title="Temple of Zeus" class="mw-redirect">Temple of Zeus</a> there. A <a target="_blank" href="http://en.wikipedia.org/wiki/Chryselephantine_sculpture" title="Chryselephantine sculpture">sculpture</a> of ivory plates and gold panels over a wooden framework, it represented the god <a target="_blank" href="http://en.wikipedia.org/wiki/Zeus" title="Zeus">Zeus</a> sitting on an elaborate cedarwood throne ornamented with ebony, ivory, gold, and precious stones. It was regarded as one of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a> until its eventual loss and destruction during the 5th century AD. No copy of the statue has ever been found, and details of its form are known only from ancient Greek descriptions and representations on coins.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/c/c6/Statue_of_Zeus.jpg',
+					lat: '37.9693',
+					lng: '23.7331',
+				},
+				{
+					name: 'Temple of Artemis at Ephesus',
+					description: '<p>The <b>Temple of Artemis</b> (<a target="_blank" href="http://en.wikipedia.org/wiki/Greek_language" title="Greek language">Greek</a>: <span lang="el" xml:lang="el">Ἀρτεμίσιον</span>, or <i>Artemision</i>), also known less precisely as the <b>Temple of <a target="_blank" href="http://en.wikipedia.org/wiki/Diana_(mythology)" title="Diana (mythology)">Diana</a></b>, was a <a target="_blank" href="http://en.wikipedia.org/wiki/Greek_temple" title="Greek temple" class="mw-redirect">Greek temple</a> dedicated to the goddess <a target="_blank" href="http://en.wikipedia.org/wiki/Artemis" title="Artemis">Artemis</a> and was one of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a>. It was located in <a target="_blank" href="http://en.wikipedia.org/wiki/Ephesus" title="Ephesus">Ephesus</a> (near the modern town of <a target="_blank" href="http://en.wikipedia.org/wiki/Sel%C3%A7uk" title="Selçuk">Selçuk</a> in present-day <a target="_blank" href="http://en.wikipedia.org/wiki/Turkey" title="Turkey">Turkey</a>), and was completely rebuilt three times before its eventual destruction in 401. Only foundations and sculptural fragments of the latest of the temples at the site remain.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/1/1d/Miniaturk_009.jpg',
+					lat: '37.950069',
+					lng: '27.365269',
+				},
+				{
+					name: 'Mausoleum at Halicarnassus',
+					description: '<p>The <b>Mausoleum at Halicarnassus</b> or <b>Tomb of Mausolus</b> (<a target="_blank" href="http://en.wikipedia.org/wiki/Greek_language" title="Greek language">Greek</a>: <span lang="el" xml:lang="el">Μαυσωλείο της Αλικαρνασσού</span>, modern <a target="_blank" href="http://en.wikipedia.org/wiki/Turkish_language" title="Turkish language">Turkish</a>: Halikarnas Mozolesi) was a <a target="_blank" href="http://en.wikipedia.org/wiki/Tomb" title="Tomb">tomb</a> built between 353 and 350&nbsp;BC at <a target="_blank" href="http://en.wikipedia.org/wiki/Halicarnassus" title="Halicarnassus">Halicarnassus</a> (present <a target="_blank" href="http://en.wikipedia.org/wiki/Bodrum" title="Bodrum">Bodrum</a>, <a target="_blank" href="http://en.wikipedia.org/wiki/Turkey" title="Turkey">Turkey</a>) for <a target="_blank" href="http://en.wikipedia.org/wiki/Mausolus" title="Mausolus">Mausolus</a>, a <a target="_blank" href="http://en.wikipedia.org/wiki/Satrap" title="Satrap">satrap</a> in the <a target="_blank" href="http://en.wikipedia.org/wiki/Achaemenid_Empire" title="Achaemenid Empire">Persian Empire</a>, and <a target="_blank" href="http://en.wikipedia.org/wiki/Artemisia_II_of_Caria" title="Artemisia II of Caria">Artemisia II of Caria</a>, who was both his wife and his sister. The <a target="_blank" href="http://en.wikipedia.org/wiki/Structure" title="Structure">structure</a> was designed by the <a target="_blank" href="http://en.wikipedia.org/wiki/Ancient_Greece" title="Ancient Greece">Greek</a> <a target="_blank" href="http://en.wikipedia.org/wiki/Architecture_of_ancient_Greece" title="Architecture of ancient Greece" class="mw-redirect">architects</a> <a target="_blank" href="http://en.wikipedia.org/wiki/Satyros" title="Satyros">Satyros</a> and <a target="_blank" href="http://en.wikipedia.org/wiki/Pythius_of_Priene" title="Pythius of Priene">Pythius of Priene</a>.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/d/d5/Mausoleum_of_Halicarnassus_2009.jpg',
+					lat: '37.038',
+					lng: '27.429',
+				},
+				{
+					name: 'Colossus of Rhodes',
+					description: '<p>The <b>Colossus of Rhodes</b> (<a target="_blank" href="http://en.wikipedia.org/wiki/Ancient_Greek" title="Ancient Greek">Ancient&nbsp;Greek</a>: <span lang="grc" xml:lang="grc">Ὁ Κολοσσὸς Ῥόδιος</span>&nbsp;<span title="Ancient Greek transliteration" class="Unicode" style="white-space:normal; text-decoration: none"><i>Ho Kolossòs Rhódios</i></span>) was a <a target="_blank" href="http://en.wikipedia.org/wiki/Statue" title="Statue">statue</a> of the Greek Titan <a target="_blank" href="http://en.wikipedia.org/wiki/Helios" title="Helios">Helios</a>, erected in the city of <a target="_blank" href="http://en.wikipedia.org/wiki/Rhodes_(city)" title="Rhodes (city)">Rhodes</a>, on the Greek island of the same name, by <a target="_blank" href="http://en.wikipedia.org/wiki/Chares_of_Lindos" title="Chares of Lindos">Chares of Lindos</a> in 280 BC. It is considered one of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a>. It was constructed to celebrate Rhodes\' victory over the ruler of Cyprus, <a target="_blank" href="http://en.wikipedia.org/wiki/Antigonus_I_Monophthalmus" title="Antigonus I Monophthalmus">Antigonus I Monophthalmus</a>, whose son unsuccessfully besieged Rhodes in 305 BC. Before its destruction in <a target="_blank" href="http://en.wikipedia.org/wiki/226_BC_Rhodes_earthquake" title="226 BC Rhodes earthquake">the earthquake of 226 BC</a>, the Colossus of Rhodes stood over 30 meters (98 feet) high, making it one of the tallest statues of the <a target="_blank" href="http://en.wikipedia.org/wiki/Ancient_world" title="Ancient world" class="mw-redirect">ancient world</a>.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/5/5f/Colosse_de_Rhodes_%28Barclay%29.jpg',
+					lat: '36.4355951',
+					lng: '28.2231159',
+				},
+				{
+					name: 'Lighthouse of Alexandria',
+					description: '<p>The <b>Lighthouse of Alexandria</b>, sometimes called the <b>Pharos of Alexandria</b> (in <a target="_blank" href="http://en.wikipedia.org/wiki/Ancient_Greek" title="Ancient Greek">Ancient Greek</a>, ὁ Φάρος τῆς Ἀλεξανδρείας), was a lofty tower built by the <a target="_blank" href="http://en.wikipedia.org/wiki/Ptolemaic_Kingdom" title="Ptolemaic Kingdom">Ptolemaic Kingdom</a> between 280 and 247 BC and between 393 and 450&nbsp;ft (120 and 137&nbsp;m) tall, it was one of the tallest man-made structures on Earth for many centuries, and was regarded as one of the <a target="_blank" href="http://en.wikipedia.org/wiki/Seven_Wonders_of_the_Ancient_World" title="Seven Wonders of the Ancient World">Seven Wonders of the Ancient World</a>. Badly damaged by three earthquakes between 956 and 1323, it then became an abandoned ruin. It was the third longest surviving ancient wonder (after the <a target="_blank" href="http://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus" title="Mausoleum at Halicarnassus">Mausoleum at Halicarnassus</a> and the still extant <a target="_blank" href="http://en.wikipedia.org/wiki/Great_Pyramid_of_Giza" title="Great Pyramid of Giza">Great Pyramid of Giza</a>) until in 1480 the last of its remnant stones were used to build the <a target="_blank" href="http://en.wikipedia.org/wiki/Citadel_of_Qaitbay" title="Citadel of Qaitbay">Citadel of Qaitbay</a> on the site. In 1994, French archaeologists discovered some remains of the lighthouse on the floor of Alexandria\'s Eastern Harbour.</p>',
+					image: 'http://upload.wikimedia.org/wikipedia/commons/2/2e/Lighthouse_-_Thiersch.gif"',
+					lat: '31.216667',
+					lng: '29.916667',
+				},
+			];
+			$(document).ready(function() {
+				var latlng = new google.maps.LatLng('35.169342','33.57392742');
+				var mapOptions = {
+					center: latlng,
+					zoom: 4
+				};
+				var map = new google.maps.Map($('#map')[0], mapOptions);
+				wonders.forEach(function(wonder) {
+					var latlng = new google.maps.LatLng(wonder.lat, wonder.lng);
+					var marker = new google.maps.Marker({
+						position: latlng,
+						map: map
+					});
+					var wonderInfoWindow = new google.maps.InfoWindow({
+						content: '<h3>' + wonder.name + '</h3>' + '<img class="wonderImage" src="' + wonder.image + '"/>'
+					});
+					google.maps.event.addListener(marker,'click',function(){
+						map.setCenter(marker.position);
+						map.setZoom(12);
+						wonderInfoWindow.open(map,marker);
+					});
+				});
+			});
+	</script>
+<style>
+	html,body,#map {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.wonderImage {
+		border: 1px solid #fff;
+		box-shadow: 2px 2px 2px #777;
+		height: 200px;
+	}
+</style>
+
+</head>
+<body>
+	<div id="map"></div>
+</body>
+</html>
