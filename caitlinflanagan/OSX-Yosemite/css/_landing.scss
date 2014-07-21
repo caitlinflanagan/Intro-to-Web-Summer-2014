@@ -1,0 +1,32 @@
+@import "design";
+
+.landing {
+	background-image: url("../images/overview_hero_bg.jpg");
+	background-size: cover;
+	height: 980px;
+
+	img {
+		margin: 0 auto;
+	}
+
+	h1 {
+		color: $font-color;
+		font-weight: $font-weight-light;
+		text-align: center;
+		font-family: $font-family;
+		font-size: 7em;
+	}
+
+	p {
+		color: $font-color;
+		font-weight: $font-weight-light;
+		font-family: $font-family;
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	span {
+		font-size: 2em;
+	}
+
+}

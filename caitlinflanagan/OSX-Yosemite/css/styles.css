@@ -1,0 +1,48 @@
+.landing {
+  background-image: url("../images/overview_hero_bg.jpg");
+  background-size: cover;
+  height: 980px; }
+  .landing img {
+    margin: 0 auto; }
+  .landing h1 {
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 7em; }
+  .landing p {
+    color: white;
+    font-weight: 100;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 1.5em; }
+  .landing span {
+    font-size: 2em; }
+
+.interface {
+  background-color: #fff;
+  height: 980px;
+  margin: 30px 0; }
+  .interface img {
+    margin: 0 auto;
+    display: block; }
+  .interface h1 {
+    color: black;
+    font-weight: 300;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 3em; }
+  .interface h2 {
+    color: #626262;
+    font-weight: 300;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 3em; }
+  .interface p {
+    color: black;
+    font-weight: 300;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 1.5em; }
+  .interface .notification span {
+    font-size: 2.5em; }
