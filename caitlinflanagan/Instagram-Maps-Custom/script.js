@@ -6,12 +6,21 @@
 		zoom: 16,
 		center: centerOfToronto,
 	}); //theBigMap variable
+	var markers = [];//step 1 for photo marker in different locations
 
 	console.log('document is ready');
 	searchPhotos(centerOfToronto); 
 	var openPhotoWindow = false;//start with all info windows closed
 
+	google.maps.event.addListener(theBigMap, 'click', function(event) {
+		searchPhotos(event.latLng);
+	})//create new photo marker
+
 	function searchPhotos(location) {
+		markers.forEach(function(marker) {
+			marker.setMap(null);
+		});
+		markers = [];
 		$.ajax({
 			type: 'GET',
 			dataType: 'jsonp',
@@ -33,6 +42,7 @@
 						map: theBigMap,
 						icon: customPhotoMarker,
 					});//photoMarker variable
+					markers.push(photoMarker);
 
 					var photoWindowContent = '';
 					photoWindowContent += '<a href="' 
