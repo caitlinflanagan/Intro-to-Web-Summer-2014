@@ -1,0 +1,32 @@
+.sprite-container {
+	background-image: url(http://i.imgur.com/kKnfUyt.png);
+	height: 63px;
+	width: 65px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+}
+
+.sprite-container.facebook {
+	background-position: -75px 0;
+}
+
+.sprite-container.twitter {
+	background-position: 0 0;
+}
+
+.sprite-container.youtube {
+	background-position: -148px 0;
+}
+
+.sprite-container.rss {
+	background-position: -223px 0;
+}
+
+.sprite-container.facebook:hover,
+.sprite-container.twitter:hover,
+.sprite-container.youtube:hover,
+.sprite-container.rss:hover {
+	background-position-y: 62px;
+	cursor: pointer;
+}

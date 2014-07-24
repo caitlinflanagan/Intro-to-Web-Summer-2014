@@ -1,4 +1,4 @@
-$(document).ready(function() {
+  $(document).ready(function() {
 	var instagramClientId = 'd73fd06d0eb840b6ae6d2b983007a1b9';
 	var mapContainer = $('#map-container')[0];
 	var centerOfToronto = new google.maps.LatLng(43.653226000000000000, -79.383184299999980000);
@@ -8,7 +8,7 @@ $(document).ready(function() {
 	}); //theBigMap variable
 
 	console.log('document is ready');
-	searchPhotos(centerOfToronto);
+	searchPhotos(centerOfToronto); 
 	var openPhotoWindow = false;//start with all info windows closed
 
 	function searchPhotos(location) {
